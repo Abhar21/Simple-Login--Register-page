@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Service Health Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>Service Health Dashboard</h1>
+        </div>
+        <div class="status-section">
+            <h2>Service Status</h2>
+            <div id="servicesList"></div>
+        </div>
+        <div class="monitor-section">
+            <h2>Monitor Specific Services</h2>
+            <select id="selectService" onchange="monitorSelectedService()"></select>
+            <div id="selectedServiceStatus"></div>
+        </div>
+        <div class="search-section">
+            <h2>Search for Services</h2>
+            <input type="text" id="searchInput" placeholder="Search services...">
+            <button onclick="searchServices()">Search</button>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+        </div>
+        <div class="notification-section">
+            <h2>Notifications</h2>
+            <p id="notification">No notifications</p>
+        </div>
+        <div class="widget-section">
+            <h2>Service Count Widget</h2>
+            <p id="upCount">Services Up: 0</p>
+            <p id="downCount">Services Down: 0</p>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.header {
+    text-align: center;
+}
+
+.status-section,
+.monitor-section,
+.search-section,
+.notification-section {
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Color-coded indicators */
+.up {
+    color: green;
+}
+
+.down {
+    color: red;
+}
+/* styles.css */
+
+/* ... Existing styles ... */
+
+.search-section {
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 10px; /* Increase padding to make the input larger */
+    transition: border-color 0.3s ease; /* Add transition for hover effect */
+}
+
+#searchInput:hover {
+    border-color: #4CAF50; /* Change border color on hover */
+}
+
+button {
+    padding: 8px 12px; /* Adjust button padding */
+    cursor: pointer;
+}
+
+/* ... Remaining styles ... */

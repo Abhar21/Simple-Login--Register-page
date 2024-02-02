@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .have-account {
+            margin-top: 20px;
+        }
+
+        .have-account a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>OTP Verification</h2>
+        <form id="otpVerificationForm">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp" maxlength="6" required>
+
+            <button type="button" onclick="verifyOTP()">Verify OTP</button>
+        </form>
+
+        <div class="have-account">
+            <p>Didn't receive OTP? <a href="#" onclick="resendOTP()">Resend OTP</a></p>
+        </div>
+    </div>
+
+    <script>
+        function verifyOTP() {
+            var enteredOTP = document.getElementById('otp').value;
+
+            // Here, you would typically send the entered OTP to your server for verification.
+            // For the sake of this example, let's assume the OTP is '123456'.
+            var expectedOTP = '123456';
+
+            if (enteredOTP === expectedOTP) {
+                alert('OTP is valid. Verification successful!');
+            } else {
+                alert('Invalid OTP. Please try again.');
+            }
+        }
+
+        function resendOTP() {
+            // Here, you would typically send a request to your server to resend the OTP.
+            // For the sake of this example, let's just display a message.
+            alert('OTP resent! Check your mobile or email.');
+        }
+    </script>
+</body>
+
+</html>
